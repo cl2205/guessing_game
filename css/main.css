@@ -3,111 +3,63 @@
 	margin: 0;
 }
 
+.jumbotron {
+	background-color: #5bc0de;
+	color: #fff;
+}
+
+.jumbotron p {
+	font-size: 2em;
+}
+
+/*****Input Field*****/
+
+#input-container {
+	max-height: 65px;
+}
 
 #input-row {
 	margin-top: 15px;
+	max-height: 60px
+}
+
+#input-col {
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 2em;
 }
 
 .input-group-lg>.form-control, .input-group-lg>.input-group-addon, .input-group-lg>.input-group-btn>.btn {
 	height: 60px;
 }
 
-.jumbotron .well {
-	margin-top: .5em;
-	margin-bottom: .5em;
-	color: #337ab7;
-	font-size: 1.3em;
-	background-color: #9cd9eb;
-	border: solid 2px #5bc0de;
-/*	border-bottom: solid 2px #337ab7;
-	border-left: solid 2px #337ab7;*/
-}
-
-.jumbotron {
-	background-color: #5bc0de;
-	color: #fff;
-}
-
-h4 {
-	color: black	;
-
-}
-.feedback {
-/*	color: #a43f21;*/
-	color: #d9534f;
-	font-size: 10px;
-}
-
-#input {
-	padding-left: 0;
-	padding-right: 0;
-	margin-bottom: 2em;
-}
-
-.button-info {
-	background-color: #337ab7;
-}
-
-.input-group-lg input span  {
+.input-group-lg input span {
 	height: 200px;
 }
 
+.input-group .form-control {
+	z-index: 0;
+}
+
+
+/*******THERMOMETER*********/
+
+#progress-col {
+	margin-right: 0;
+	padding-right: 0;
+	margin-top: 15px;
+}
+
 .progress {
-	margin-top: 2em;
-	margin-bottom: .1em;
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
-#thermometer { /*#5cb85c 40%*/
-	background-image: linear-gradient(to right, #337ab7 20%, #5cb85c 45%, #f0ad4e 70%, #d9534f 80%, red 100%);
-
+#thermometer {
+	background-image: linear-gradient(to right, #337ab7 5%, #f0ad4e 45%, #d9534f 75%, red 100%);
 }
 
-#play-again {
-	margin-left: 15px;
-}
-
-
-.buttons {
-	margin-top: 2em;
-
-}
-
-.col-xs-11 {
-	margin-right: 0;
-	padding-right: 0;
-/*	height: 100px;*/
-}
-
-.col-sm-1 {
-
-	padding-right: 0;
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.col-sm-8 {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.col-sm-4 {
-	padding: 0;
-
-}
-.glyphicon-fire {
-	color: red;
-	font-size: 30px;
-
-
-/*	text-align: right;*/
-/*	margin-bottom: 10px;
-	padding-bottom: 10px;*/
-/*	text-align: top;*/
-/*	vertical-align: bottom;
-	margin-bottom: -20px;*/
-}
-
-.glyphicon-map-marker {
+#pointer {
 	font-size: 2em;
 	color: #d9534f;
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
@@ -117,10 +69,125 @@ h4 {
 	  -o-transform: rotate(180deg);
 	  transform: rotate(180deg);
 }
-.progress {
-	margin-top: 10px;
-	margin-bottom: 0;
+
+
+#fire-col {
+
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 15px;
 }
+
+.glyphicon-fire {
+	color: red;
+	font-size: 30px;
+}
+
+
+/******Feedback Divs*******/
+
+.jumbotron .well {
+	min-height: 50px;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	color: #337ab7;
+	font-size: 1.5em;
+	background-color: #9cd9eb;
+	border: solid 2px #5bc0de;
+}
+
+
+#feedback-col {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+#num-guess-col {
+	padding: 0;
+}
+
+
+/***Guesses Log*****/
+
+#guess-log { /*circle column*/
+	display: none;
+}
+
+.guessed { /*circle divs*/
+	width: 62px;
+	height: 62px;
+	border-radius: 31px;
+	margin: 0 .5em;
+	padding: 0;
+}
+
+.guessed p { /*numbers*/
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 10px;
+	margin: 0;
+}
+
+/*******Modal Window****/
+
+#overlay {
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	text-align: center;
+}
+
+#modal {
+	display: none;
+	margin-top: 15%;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-bottom: 20%;
+	position: absolute;
+    background: #fff;
+    border: solid 2px black;
+    border-radius: 8px;
+    padding: 2px;
+  	background-color: #fff;
+	  -webkit-background-clip: padding-box;
+	          background-clip: padding-box;
+	  border: 1px solid #999;
+	  border: 1px solid rgba(0, 0, 0, .2);
+	  border-radius: 6px;
+	  outline: 0;
+	  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+	          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+
+#message {
+    border-radius: 1px;
+    background: #fff;
+    padding: 15px 25px 25px 25px;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 10px;
+    color: #337ab7;
+}
+
+.result {
+	margin: 20px 10px 20px 0;
+	color: #337ab7;
+}
+
+#play-again {
+	margin-left: 0;
+	margin-top: 5px;
+}
+
+
+
 /* ========== Media Queries ============ */
 
 @media (min-width: 700px) {
@@ -128,3 +195,19 @@ h4 {
 		font-size: 30px;
 	}	
 }
+
+@media (max-width: 667px) {
+	.guessed {
+		width: 45px;
+		height: 45px;
+	}
+
+	.guessed p {
+	text-align: center;
+	font-size: 25px;
+	vertical-align: middle;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+}
+
