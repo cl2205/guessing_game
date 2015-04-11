@@ -129,8 +129,8 @@ var game = function() {
 			$('#feedback').append($guessHigher);
 		}
 	}
-
-	function calculateTemp(diff) {	// temperatuire scale within 25 units of proximity to answer
+	
+	function calculateTemp(diff) {	// temperature scale within 25 units of proximity to answer
 		var prevGuess = list[list.length-1];	//prevGuess is last number in guess array
 		var prevDiff = Math.abs(prevGuess - answer);	//previous guess difference
 		var prevTemp = 100 - (prevDiff * 4);	// 100%/25 = move 4% per unit change
