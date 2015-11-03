@@ -1,0 +1,260 @@
+	
+<!-- 			  		<button class="btn btn-warning btn-lg" id="play-again" type="button">Play again</button> -->
+/*thermometer div*/
+/*.progress { 
+	margin-top: 2em;
+	margin-bottom: .1em;
+}*/
+
+/*#marker-row {
+	padding-right: 15px;
+
+}*/
+
+/*#footer {
+	padding: 10px;
+}*/
+
+
+/*	text-align: right;
+/*	margin-bottom: 10px;
+	padding-bottom: 10px;*/
+/*	text-align: top;*/
+/*	vertical-align: bottom;
+	margin-bottom: -20px;*/
+/*.feedback {
+	color: #d9534f;
+	font-size: 14px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}*/
+/*.buttons {
+	margin-top: 2em;
+}*/
+
+/*.button-info {
+	background-color: #337ab7;
+}*/
+
+
+	/*h4 {
+	color: black;
+}*/
+			// if (list.length === 0) {  //if this is first guess
+		// 	compareAnswer(guess); //compare with answer
+
+		// } else {
+		// 	comparePrev(guess); //else compare with previous guess & answer
+		// }
+
+
+
+
+	// else if (diff > 5) {
+	// 	$('#feedback').text("You're hot!");
+	// } else if (diff > 0) {
+	// 	$('#feedback').text("You're super hot!");
+	// }
+
+
+	// else if (prevDiff < diff) {
+
+	// 	if (diff > 0) {
+	// 		$('#feedback').text("You've gone over! Guess lower.");
+	// 	}
+
+	// }
+	
+		// //prevGuess > answer > guess
+		// (prevGuess > guess && guess < answer || prevGuess < guess && guess < answer) {
+	// } else if (guess < answer) {
+
+		// if (prevDiff > diff || prevDiff === diff) {
+
+		// 	if (diff > 25) {
+		// 		$('#feedback').text("You're getting warmer, but still pretty cold! Guess higher.");
+		// 	} else if (diff > 10) {
+		// 		$('#feedback').text("You're getting warmer! Guess higher.");
+		// 	} else if (diff > 5) {
+		// 		$('#feedback').text("You're hot! Guess higher.");
+		// 	} else if (diff > 0) {
+		// 		$('#feedback').text("You're super hot!! Guess higher.");
+		// 	}
+
+
+	function compareAnswer(guess) {
+
+	// if (diff === 0) {
+	// 	$('#feedback').text("That's correct!");
+	// }
+
+	if (diff > 25) { // if cold
+
+		// if (guess > answer) {
+										//guess lower
+		$('#feedback').text("You're cold!");
+			// $('#feedback').append($guessLower);
+
+		// } else if (guess < answer) {
+
+			// $('#feedback').text("You're cold! Guess higher");
+		// }
+
+	} else if (diff > 10) {
+
+		// if (guess > answer) {
+			$('#feedback').text("You're warm!");
+
+		// } else if (guess < answer) {
+			// $('#feedback').text("You're warm! Guess higher.");
+		// }
+
+	} else if (diff > 5) {
+
+		// if (guess > answer) {
+			$('#feedback').text("You're hot!");
+		// } else if (guess < answer) {
+			// $('#feedback').text("You're hot! Guess higher.");
+		// }
+
+	} else if (diff > 0) {
+
+		// if (guess > answer) {
+			$('#feedback').text("You're super hot!");
+		// } else if (guess < answer) {
+		// 	$('#feedback').text("You're super hot!! Guess higher.");
+		// }
+	}
+
+}
+
+
+
+
+
+
+
+		function comparePrev(guess) {
+	var diff = Math.abs(guess-answer);
+	var prevGuess = list[list.length-1];
+	var prevDiff = Math.abs(prevGuess - answer);
+
+	if (prevDiff > diff || prevDiff === diff) {
+
+			if (diff > 25) {
+				$('#feedback').text("You're getting warmer, but still pretty cold.");
+			} else if (diff > 10) {
+				$('#feedback').text("You're getting warmer!");
+			} else if (diff > 5) {
+				$('#feedback').text("You're hot!");
+			} else if (diff > 0) {
+				$('#feedback').text("You're super hot!");
+			}
+	}
+
+	if (prevDiff < diff) {
+
+		if (diff > 25) {
+			$('#feedback').text("You're getting colder!");
+		} else if (diff > 10) {
+			$('#feedback').text("You're getting warmer!");
+		} else if (diff > 5) {
+			$('#feedback').text("You're hot!");
+		} else if (diff > 0) {
+			$('#feedback').text("You're super hot!");
+		}
+
+	}
+
+	return true;
+}		
+
+
+
+
+	// if (guess === answer) {
+
+	// 	$('#feedback').text("You're correct!");
+	// }
+		//prevGuess > guess
+	// if (guess > answer) {
+<!-- 			<div class="container">
+				<div class="row">
+						<div class="col-sm-5">
+								<div class="well well-sm">You're close! Guess lower.</div>
+							<h4>You're close! Guess lower.</h4>
+						</div>
+				</div>
+			</div>
+ -->
+				<!-- <!<div class="col-xs-9 alert alert-warning hidden" role="alert">Oops! Invalid number. Please try again.
+				</div>
+				
+				<div class="col-xs-9 col-offset-1 alert alert-info hidden" role="alert">Too low. Guess again.
+				</div>
+				<div class="col-xs-9 col-offset-1 alert alert-warning hidden" role="alert">Too high. Guess again.
+				</div>
+				<div class="col-xs-9 col-offset-1 alert alert-danger hidden" role="alert">You're close! Guess higher.
+				</div> -->
+
+						 		<!-- <div class="row">
+		 			<div class="btn-group" role="group" aria-label="Guess">
+
+			 		<div class="col-xs-6">
+			 			<label class="sr-only" for="guess">Guess</label>
+			  			<input type="text" class="form-control input-lg" placeholder="Number">
+					</div> -->
+				<!-- 	<div class="col-xs-6"> -->
+						<!-- <button class="btn btn-danger btn-lg" type="submit">Submit your guess</button> -->
+						<!-- <p><a class="btn btn-danger btn-lg" href="#" role="button">Submit your guess</a></p> -->
+				<!-- 	</div> -->
+					<!-- </div> -->
+				<!-- </div>
+ -->
+
+ 			<!-- <div class="progress">
+				  <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 25%">
+				    <span class="sr-only">35% Complete (success)</span>
+				  </div>
+				  <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 25%">
+				    <span class="sr-only">30% Complete (info)</span>
+				  </div>
+				  <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 25%">
+				    <span class="sr-only">35% Complete (warning)</span>
+				  </div>
+				  <div class="progress-bar progress-bar-danger" style="width: 10%">
+				    <span class="sr-only">30% Complete (danger)</span>
+				  </div>
+
+</div> -->
+
+// 	}
+
+
+// 	if (prevGuess < guess && guess < answer) {
+
+// 		if (diff > 25) {
+
+// 			$('#feedback').text("You're getting warmer, but still pretty cold! Guess higher.");
+		
+// 		} else if (diff > 10) {
+
+// 			$('#feedback').text("You're getting warmer! Guess higher.");
+
+// 		} else if (diff > 5) {
+
+// 			$('#feedback').text("You're hot! Guess higher.");
+
+// 		} else if (diff > 0) {
+
+// 			$('#feedback').text("You're super hot!! Guess higher.");
+// 		}
+// 			//prevGuess < answer < guess
+// 	} else if (prevGuess < guess && guess > answer) {
+
+// 		$('#feedback').text("You've gone over! Guess lower.");
+
+// 	}
+
+// 	return true;
+// }

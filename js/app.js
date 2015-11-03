@@ -8,7 +8,6 @@ var game = function() {
 		diff,
 		temp;
 
-	console.log("answer: " + answer);
 
 /******** Modal Results Window ********/
 	var $overlay = $('<div id="overlay"></div>'),
